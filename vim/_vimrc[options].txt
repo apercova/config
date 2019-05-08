@@ -1,0 +1,6 @@
+set number
+set ai sw=4 
+set gfn=Consolas:h12:cANSI:qDRAFT
+set guioptions-=T
+set nobackup
+set noundofile 
