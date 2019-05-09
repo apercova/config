@@ -1,5 +1,5 @@
             <Item>
-               <Key>SQLDeveloperFavCustomSyntax</Key>
+               <Key>CustomDarkDraculaBasedOriginal</Key>
                <Value class="java.util.ArrayList">
                   <Item class="oracle.ide.ceditor.options.S2Style" name="base-plain-style" usepfg="false" frgb="-1579033" usepbg="false" brgb="-13879740" usepfont="false" font="0"/>
                   <Item class="oracle.ide.ceditor.options.S2Style" name="base-comment-style" usepfg="false" frgb="-15740003" usepbg="true" brgb="-13879740" usepfont="true" font="0"/>
