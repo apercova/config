@@ -1,0 +1,35 @@
+Foreground:248 248 242
+Background:40 42 54
+Current Line:91 44 135
+Selected Text:91 98 154
+Comment:15 211 157
+Numero: CIAN
+Operador: PINK
+Palabra clave: PURPLE
+Identificador: PINK
+Cadena: ORANGE
+
+Resaltado 1: BKG: PURPLE; FRG:40 42 54
+Resaltado 2: BKG: CIAN; FRG:40 42 54 
+Marcador: BKG: 91 44 135; FRG:PINK
+Execution point: BKG: 91 44 135; FRG:PINK
+Enabled Brakpoint: BKG: 91 44 135; FRG:PINK
+Corchetes1: PINK
+Corchetes2: YELLOW
+Eliminacion: RED
+Error: RED
+Warning: ORANGE
+Agregado: CIAN
+Eliminado: RED
+PLSQL CUstom1: RED
+PLSQL CUstom2: YELLLOW
+PLSQL CUstom3: CIAN
+
+*** Colores ***
+PINK: 255 121 198
+RED: 255 99 99
+CIAN: 139 233 253
+GREEN: 80 250 123
+PURPLE: 214 165 255
+YELLOW: 241 250 140
+ORANGE: 255 214 66
