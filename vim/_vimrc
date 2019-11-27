@@ -25,7 +25,7 @@ Plugin 'Chiel92/vim-autoformat'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'itchyny/lightline.vim'
 Plugin 'mattn/emmet-vim'
-Plugin 'challenger-deep-theme/vim'
+Plugin 'challenger-deep-theme/vim', {'name': 'challenger-deep-theme'}
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
