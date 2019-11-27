@@ -1,6 +1,5 @@
 " -----> Windows .vimrc file <-----
 set nocompatible              " be iMproved, required
-filetype off                  " required
 
 " set the runtime path to include Vundle and initialize
 set rtp+=$HOME/.vim/bundle/Vundle.vim/
@@ -13,38 +12,24 @@ Plugin 'VundleVim/Vundle.vim'
 
 Plugin 'dracula/vim', { 'name': 'dracula' }
 Plugin 'tpope/vim-fugitive'
-" Plugin 'vim-airline/vim-airline'
-" Plugin 'vim-airline/vim-airline-themes'
-Plugin 'scrooloose/nerdtree'
+Plugin 'itchyny/lightline.vim'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'jiangmiao/auto-pairs'
-Plugin 'vim-syntastic/syntastic'
 Plugin 'pseewald/vim-anyfold'
+Plugin 'tpope/vim-vinegar'
 Plugin 'tpope/vim-surround'
-Plugin 'Chiel92/vim-autoformat'
-Plugin 'airblade/vim-gitgutter'
-Plugin 'itchyny/lightline.vim'
 Plugin 'mattn/emmet-vim'
 Plugin 'challenger-deep-theme/vim', {'name': 'challenger-deep-theme'}
+Plugin 'airblade/vim-gitgutter'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
-" To ignore plugin indent changes, instead use:
-"filetype plugin on
-"
-" Brief help
-" :PluginList       - lists configured plugins
-" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
-" :PluginSearch foo - searches for foo; append `!` to refresh local cache
-" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
-"
-" see :h vundle for more details or wiki for FAQ
-" Put your non-Plugin stuff after this line
-"
+
 syntax on
 colorscheme dracula
 set guifont=Consolas:h13:cANSI:qDRAFT
+"set guifont=inconsolata:h13:cANSI:qDRAFT
 set number
 set norelativenumber
 set fileencodings=utf-8
@@ -55,6 +40,12 @@ set expandtab
 set foldmethod=indent
 set nobackup
 set noundofile
+let g:netrw_liststyle = 3
+let g:netrw_banner = 0
+let g:netrw_browse_split = 2
+let g:netrw_winsize = 30
+map <C-S-Left> :Vexplore <CR>
+map <C-S-Down> :Hexplore <CR>
 
 " -----> Lightline Configuration <-----
 set laststatus=2
@@ -72,52 +63,18 @@ let g:lightline = {
       \   'gitbranch': 'fugitive#head'
       \ },
       \ }
-" -----> Lightline Configuration <-----
-
-" -----> Airline Configuration <-----
-" let g:airline_theme='light'
-" -----> Airline Configuration <-----
-
-" -----> NERDTree Configuration <-----
-" autocmd vimenter * NERDTree
-" https://superuser.com/questions/195022/vim-how-to-synchronize-nerdtree-with-current-opened-tab-file-path
-autocmd BufEnter * silent! lcd %:p:h
-map <C-S-Left> :NERDTreeToggle %<CR>
-let NERDTreeShowHidden=1
-" ignore specifc files
-let NERDTreeIgnore=['\.pyc$', '\~$', '\.swp$']
-" -----> NERDTree Configuration <-----
-
-" -----> Syntastic Configuration <-----
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-" https://medium.com/@hpux/vim-and-eslint-16fa08cc580f
-let g:syntastic_javascript_checkers = ['eslint']
-let g:syntastic_javascript_eslint_exe = 'npm run lint --'
-" -----> Syntastic Configuration <-----
 
 " ----->Anyfold Configuration<-----
 autocmd Filetype * AnyFoldActivate
+let g:anyfold_fold_comments=1
 set foldlevel=99
-" ----->Anyfold Configuration<-----
-
-" ----->Autoformat Configuration<-----
-" set :Autoformat command to <F3>
-noremap <F3> :Autoformat<CR>
-" ----->Autoformat Configuration<-----
 
 " ----->Gitgutter Configuration<-----
-" set updatetime to 100 ms
+let g:gitgutter_git_executable = 'C:\software\Git\bin\git.exe'
+let g:gitgutter_max_signs = 750
 set updatetime=100
-" ----->Gitgutter Configuration<-----
 
 " ----->Emmet Configuration<-----
 "let g:user_emmet_mode='n'    "only enable normal mode functions.
 "let g:user_emmet_mode='inv'  "enable all functions, which is equal to
 let g:user_emmet_mode='a'    "enable all function in all mode.
-" ----->Emmet Configuration<-----
