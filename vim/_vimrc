@@ -10,6 +10,7 @@ call vundle#begin('$HOME/.vim/bundle/')
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 
+Plugin 'haishanh/night-owl.vim'
 Plugin 'dracula/vim', { 'name': 'dracula' }
 Plugin 'tpope/vim-fugitive'
 Plugin 'itchyny/lightline.vim'
@@ -46,6 +47,11 @@ let g:netrw_browse_split = 2
 let g:netrw_winsize = 30
 map <C-S-Left> :Vexplore <CR>
 map <C-S-Down> :Hexplore <CR>
+
+" -----> NightOwl Configuration <-----
+if (has("termguicolors"))
+ set termguicolors
+endif
 
 " -----> Lightline Configuration <-----
 set laststatus=2
