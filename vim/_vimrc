@@ -11,7 +11,9 @@ call vundle#begin('$HOME/.vim/bundle/')
 Plugin 'VundleVim/Vundle.vim'
 
 Plugin 'haishanh/night-owl.vim'
+Plugin 'challenger-deep-theme/vim', {'name': 'challenger-deep-theme'}
 Plugin 'dracula/vim', { 'name': 'dracula' }
+Plugin 'chriskempson/base16-vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'itchyny/lightline.vim'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
@@ -19,8 +21,9 @@ Plugin 'jiangmiao/auto-pairs'
 Plugin 'pseewald/vim-anyfold'
 Plugin 'tpope/vim-vinegar'
 Plugin 'tpope/vim-surround'
+Plugin 'tpope/vim-eunuch'
+Plugin 'tpope/vim-speeddating'
 Plugin 'mattn/emmet-vim'
-Plugin 'challenger-deep-theme/vim', {'name': 'challenger-deep-theme'}
 Plugin 'airblade/vim-gitgutter'
 
 " All of your Plugins must be added before the following line
@@ -48,16 +51,17 @@ let g:netrw_winsize = 30
 map <C-S-Left> :Vexplore <CR>
 map <C-S-Down> :Hexplore <CR>
 
-" -----> NightOwl Configuration <-----
-if (has("termguicolors"))
- set termguicolors
+" -----> Terminal GUI Colors Configuration <-----
+if has('nvim') || has('termguicolors')
+  set termguicolors
 endif
 
-" -----> Lightline Configuration <-----
+" -----> GUI True Colors Configuration <-----
 set laststatus=2
 if !has('gui_running')
   set t_Co=256
 endif
+
 set noshowmode  " to get rid of thing like --INSERT--
 set noshowcmd  " to get rid of display of last command
 set shortmess+=F  " to get rid of the file name displayed in the command line bar
